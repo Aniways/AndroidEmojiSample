@@ -1,4 +1,4 @@
-package com.aniways.sample;
+package com.aniways.emoji.sample;
 
 import com.aniways.Aniways;
 
@@ -15,13 +15,15 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		Aniways.init(this);
+		
 		super.onCreate(savedInstanceState);
 
 		// Init Aniways here, before using any UI components.
 		// IF your app has an 'Application' class, then it is best to init Aniways there in order not
 		// do have to do it in the onCreate() of every entry point activity and in onCreate() of services
 		// that use the Aniways API
-		Aniways.init(this);
+
 		
 		// The content view is set up after the Aniways init because the view contains Aniways elements
 		setContentView(R.layout.activity_main);
